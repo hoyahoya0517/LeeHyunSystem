@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Main.module.css";
-import Logo from "/public/svg/logo.svg";
+import Logo from "/public/svg/lee.svg";
 import {
   motion,
   useAnimate,
@@ -55,7 +55,6 @@ export default function Main({
   }, [backgroundColor]);
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
       setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);

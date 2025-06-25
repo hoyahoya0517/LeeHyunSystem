@@ -87,9 +87,6 @@
   justify-content: center;
   gap: 10px;
 }
-.button span {
-  cursor: pointer;
-}
 @media (max-width: 768px) {
   .slide {
     height: 350px;

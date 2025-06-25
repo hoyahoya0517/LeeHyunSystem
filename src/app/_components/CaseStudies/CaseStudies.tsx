@@ -35,7 +35,7 @@ export default function CaseStudies({
     offset: ["start end", "end start"],
   });
   const rightHandle = () => {
-    if (index === 4) return;
+    if (index === 5) return;
     const tmp = index;
     setIndex(tmp + 1);
     mainSlideAnimate(
@@ -204,16 +204,26 @@ export default function CaseStudies({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <span onClick={leftHandle}>
+              <span
+                onClick={leftHandle}
+                style={
+                  index === 1 ? { cursor: "default" } : { cursor: "pointer" }
+                }
+              >
                 <BiChevronLeft
                   size={32}
                   color={index === 1 ? "#bebebe" : "#707072"}
                 />
               </span>
-              <span onClick={rightHandle}>
+              <span
+                onClick={rightHandle}
+                style={
+                  index === 5 ? { cursor: "default" } : { cursor: "pointer" }
+                }
+              >
                 <BiChevronRight
                   size={32}
-                  color={index === 4 ? "#bebebe" : "#707072"}
+                  color={index === 5 ? "#bebebe" : "#707072"}
                 />
               </span>
             </motion.div>

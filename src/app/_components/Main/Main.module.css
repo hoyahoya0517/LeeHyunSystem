@@ -1,6 +1,6 @@
 .main {
   overflow: hidden;
-  height: 100vh;
+  height: 100svh;
   padding: 0 30px;
   position: relative;
   z-index: 3;
@@ -26,7 +26,7 @@
 }
 .logo svg {
   width: 100%;
-  height: max(80px, 8.5vw);
+  height: max(40px, 4.5vw);
 }
 .comment {
   position: absolute;
@@ -41,14 +41,17 @@
 }
 
 @media (max-width: 1024px) {
-  .logo svg {
-    height: 54px;
-  }
 }
 @media (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
   .logo {
-    top: 0;
-    left: 0;
+    top: 16px;
+    left: 16px;
+  }
+  .logo svg {
+    height: 36px;
   }
   .comment {
     bottom: 16px;

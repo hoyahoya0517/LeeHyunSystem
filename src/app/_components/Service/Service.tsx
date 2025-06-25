@@ -20,7 +20,7 @@ export default function Service({
   setBackgroundColor: (color: string) => void;
 }) {
   const [first, setFirst] = useState(true);
-  const [stickyColor, setStickyColor] = useState("#000000");
+  const [stickyColor, setStickyColor] = useState("#f5f5f7");
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
   const [imageScope, imageAnimate] = useAnimate();
