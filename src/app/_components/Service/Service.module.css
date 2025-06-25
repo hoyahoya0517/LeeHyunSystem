@@ -1,0 +1,123 @@
+.service {
+  height: 100svh;
+  padding: 0 30px;
+  position: relative;
+}
+.background {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.stickyContainer {
+  grid-column: 1 / 3;
+  position: relative;
+  height: 100%;
+}
+.sticky {
+  position: sticky;
+  top: 30px;
+}
+.sticky span {
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.imageContainer {
+  grid-column: 16/21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.textContainer {
+  grid-column: 3/15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  word-break: keep-all;
+  color: var(--white-color);
+}
+.text {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.textTitle span {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: max(40px, 4.5vw);
+  line-height: 1.2;
+}
+.textContent span {
+  font-family: "IBM Plex Sans KR";
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1024px) {
+  .textContent span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .service {
+    padding: 0 16px;
+  }
+  .background {
+    display: flex;
+    flex-direction: column;
+  }
+  .stickyContainer {
+    flex: 1;
+    margin-bottom: 32px;
+    order: 0;
+  }
+  .sticky {
+    position: relative;
+    top: 0;
+  }
+  .imageContainer {
+    z-index: 4;
+    flex-basis: 50%;
+    order: 1;
+  }
+  .image {
+    height: 100%;
+  }
+  .textContainer {
+    flex-basis: 50%;
+    order: 2;
+  }
+  .text {
+    height: 100%;
+    gap: 0;
+    justify-content: center;
+    gap: 16px;
+  }
+}
