@@ -21,7 +21,6 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
       setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);

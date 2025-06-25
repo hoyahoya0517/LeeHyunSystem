@@ -1,6 +1,6 @@
 .main {
   overflow: hidden;
-  height: 100svh;
+  height: 100vh;
   padding: 0 30px;
   position: relative;
   z-index: 3;
@@ -47,8 +47,8 @@
 }
 @media (max-width: 768px) {
   .logo {
-    top: 16px;
-    left: 16px;
+    top: 0;
+    left: 0;
   }
   .comment {
     bottom: 16px;
