@@ -25,7 +25,7 @@
   height: auto;
 }
 .logo svg {
-  height: 4.5vw;
+  height: 6.5vw;
 }
 .comment {
   position: absolute;
@@ -50,7 +50,7 @@
     left: 16px;
   }
   .logo svg {
-    height: 36px;
+    height: 54px;
   }
   .comment {
     bottom: 16px;

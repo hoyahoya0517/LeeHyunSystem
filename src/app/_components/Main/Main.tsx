@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Main.module.css";
-import Logo from "/public/svg/lee.svg";
+import Logo from "/public/svg/logo.svg";
 import {
   motion,
   useAnimate,
