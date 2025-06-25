@@ -164,7 +164,7 @@ export default function Service2({
             style={
               width && width > 768
                 ? { top: `calc(150% - ${(2 - opacity) * 30}%)` }
-                : { top: `calc(90% + ${(2 - opacity) * 10}%)` }
+                : { top: "100%" }
             }
           >
             <div style={{ opacity: opacity }}>
