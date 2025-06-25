@@ -29,6 +29,7 @@ export default function Contact({
     offset: ["start end", "end start"],
   });
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log(2, latest);
     if (first && latest >= 0.35 && latest < 0.85) {
       setFirst(false);
       setBackgroundColor("#364fdc");

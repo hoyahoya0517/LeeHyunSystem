@@ -21,7 +21,6 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 37px;
-  background: #171717;
   background: linear-gradient(
     0deg,
     rgba(23, 23, 23, 0.46) 0%,
@@ -42,7 +41,7 @@
 }
 .newWorld {
   position: absolute;
-  top: 30px;
+  top: 24px;
   left: 30px;
 }
 .newWorld span {
@@ -96,7 +95,7 @@
 }
 @media (max-width: 768px) {
   .newWorld {
-    top: 16px;
+    top: 12px;
     left: 16px;
   }
   .way {

@@ -55,6 +55,7 @@ export default function CaseStudies({
     );
   };
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log(1, latest);
     if (first && latest >= 0.35 && latest < 0.85) {
       setFirst(false);
       setOpacity(1 - (latest - 0.6) * 5);
@@ -110,9 +111,6 @@ export default function CaseStudies({
         { duration: 0.3, ease: "easeOut" }
       );
       setIsPage(false);
-    } else if (backgroundColor === "#f5f5f7" && latest > 0.85 && latest < 1) {
-      setBackgroundColor("#364fdc");
-      setStickyColor("#80808b");
     } else if (
       backgroundColor === "#364fdc" &&
       latest <= 0.85 &&
