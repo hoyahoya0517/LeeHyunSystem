@@ -24,7 +24,7 @@ export default function CaseStudies({
   const [isPage, setIsPage] = useState(false);
   const [index, setIndex] = useState(1);
   const [first, setFirst] = useState(true);
-  const [stickyColor, setStickyColor] = useState("#80808b");
+  const [stickyColor, setStickyColor] = useState("#000000");
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
   const [slideScope, slideAnimate] = useAnimate();
@@ -55,7 +55,6 @@ export default function CaseStudies({
     );
   };
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log(1, latest);
     if (first && latest >= 0.35 && latest < 0.85) {
       setFirst(false);
       setOpacity(1 - (latest - 0.6) * 5);
@@ -67,9 +66,9 @@ export default function CaseStudies({
         { opacity: 1 },
         { duration: 0, ease: "easeOut" }
       );
-      if (latest > 0.65 && latest < 0.85) {
+      if (latest >= 0.65 && latest < 0.85) {
         setIsPage(false);
-      } else if (latest <= 0.65 && latest > 0.35) {
+      } else if (latest < 0.65 && latest > 0.35) {
         setIsPage(true);
       }
     } else if (first && latest < 0.35) {
@@ -111,19 +110,20 @@ export default function CaseStudies({
         { duration: 0.3, ease: "easeOut" }
       );
       setIsPage(false);
+    } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
+      setStickyColor("#80808b");
     } else if (
       backgroundColor === "#364fdc" &&
-      latest <= 0.85 &&
+      latest < 0.85 &&
       latest > 0.35
     ) {
-      setBackgroundColor("#f5f5f7");
       setStickyColor("#000000");
     }
-    if (backgroundColor === "#f5f5f7" && latest > 0.65 && latest < 1) {
+    if (backgroundColor === "#f5f5f7" && latest >= 0.65 && latest < 1) {
       setIsPage(false);
     } else if (
       backgroundColor === "#f5f5f7" &&
-      latest <= 0.65 &&
+      latest < 0.65 &&
       latest > 0.35
     ) {
       setIsPage(true);

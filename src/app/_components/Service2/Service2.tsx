@@ -65,7 +65,6 @@ export default function Service2({
       return;
     } else if (first && latest >= 0.85) {
       setFirst(false);
-      setBackgroundColor("#f5f5f7");
       setStickyColor("#80808b");
       return;
     }
@@ -98,15 +97,13 @@ export default function Service2({
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
-    } else if (backgroundColor === "#364fdc" && latest > 0.85 && latest < 1) {
-      setBackgroundColor("#f5f5f7");
+    } else if (backgroundColor === "#364fdc" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
     } else if (
       backgroundColor === "#f5f5f7" &&
-      latest <= 0.85 &&
+      latest < 0.85 &&
       latest > 0.35
     ) {
-      setBackgroundColor("#364fdc");
       setStickyColor("#f5f5f7");
     }
   });

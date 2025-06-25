@@ -44,7 +44,6 @@ export default function About({
       return;
     } else if (first && latest < 0.35) {
       setFirst(false);
-      setBackgroundColor("#000000");
       setStickyColor("#000000");
       setNavIsBlack(false);
       imageAnimate(
@@ -55,7 +54,6 @@ export default function About({
       return;
     } else if (first && latest >= 0.85) {
       setFirst(false);
-      setBackgroundColor("#364fdc");
       setStickyColor("#80808b");
       return;
     }
@@ -76,15 +74,13 @@ export default function About({
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
-    } else if (backgroundColor === "#f5f5f7" && latest > 0.85 && latest < 1) {
-      setBackgroundColor("#364fdc");
+    } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
     } else if (
       backgroundColor === "#364fdc" &&
-      latest <= 0.85 &&
+      latest < 0.85 &&
       latest > 0.35
     ) {
-      setBackgroundColor("#f5f5f7");
       setStickyColor("#000000");
     }
   });

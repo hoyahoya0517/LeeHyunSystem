@@ -20,6 +20,7 @@ export default function Contact({
   backgroundColor: string;
   setBackgroundColor: (color: string) => void;
 }) {
+  const [titleColor, setTitleColor] = useState("#000000");
   const [first, setFirst] = useState(true);
   const [scope, animate] = useAnimate();
   const [sliderScope, animateSlider] = useAnimate();
@@ -29,11 +30,11 @@ export default function Contact({
     offset: ["start end", "end start"],
   });
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log(2, latest);
     if (first && latest >= 0.35 && latest < 0.85) {
       setFirst(false);
       setBackgroundColor("#364fdc");
       setNavIsBlack(false);
+      setTitleColor("#f5f5f7");
       animateSlider(
         sliderScope.current,
         { opacity: 1 },
@@ -44,15 +45,13 @@ export default function Contact({
       setFirst(false);
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
-      return;
-    } else if (first && latest >= 0.85) {
-      setFirst(false);
-      setBackgroundColor("#364fdc");
+      setTitleColor("#f5f5f7");
       return;
     }
     if (backgroundColor === "#f5f5f7" && latest >= 0.35 && latest < 0.85) {
       setBackgroundColor("#364fdc");
       setNavIsBlack(false);
+      setTitleColor("#f5f5f7");
       animateSlider(
         sliderScope.current,
         { opacity: 1 },
@@ -61,19 +60,12 @@ export default function Contact({
     } else if (backgroundColor === "#364fdc" && latest < 0.35 && latest > 0) {
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
+      setTitleColor("#f5f5f7");
       animateSlider(
         sliderScope.current,
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
-    } else if (backgroundColor === "#364fdc" && latest > 0.85 && latest < 1) {
-      setBackgroundColor("#364fdc");
-    } else if (
-      backgroundColor === "#364fdc" &&
-      latest <= 0.85 &&
-      latest > 0.35
-    ) {
-      setBackgroundColor("#364fdc");
     }
   });
   useEffect(() => {
@@ -123,7 +115,7 @@ export default function Contact({
             </InfiniteSlider>
           </motion.div>
         </div>
-        <div className={styles.newWorld}>
+        <div className={styles.newWorld} style={{ color: titleColor }}>
           <span>
             새로운 세상을
             <br />

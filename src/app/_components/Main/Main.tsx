@@ -30,21 +30,8 @@ export default function Main({
       setOpacity(1 - (latest - 0.6) * 5);
       setBackgroundColor("#000000");
       return;
-    } else if (first && latest >= 0.85) {
-      setFirst(false);
-      setBackgroundColor("#f5f5f7");
-      return;
     }
     setOpacity(1 - (latest - 0.6) * 5);
-    if (backgroundColor === "#000000" && latest > 0.9 && latest < 1) {
-      setBackgroundColor("#f5f5f7");
-    } else if (
-      backgroundColor === "#f5f5f7" &&
-      latest <= 0.85 &&
-      latest > 0.35
-    ) {
-      setBackgroundColor("#000000");
-    }
   });
   useEffect(() => {
     animate(

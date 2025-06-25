@@ -20,7 +20,7 @@ export default function Service({
   setBackgroundColor: (color: string) => void;
 }) {
   const [first, setFirst] = useState(true);
-  const [stickyColor, setStickyColor] = useState("#f5f5f7");
+  const [stickyColor, setStickyColor] = useState("#000000");
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
   const [imageScope, imageAnimate] = useAnimate();
@@ -55,7 +55,6 @@ export default function Service({
       return;
     } else if (first && latest >= 0.85) {
       setFirst(false);
-      setBackgroundColor("#364fdc");
       setStickyColor("#80808b");
       return;
     }
@@ -78,15 +77,13 @@ export default function Service({
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
-    } else if (backgroundColor === "#364fdc" && latest > 0.85 && latest < 1) {
-      setBackgroundColor("#364fdc");
+    } else if (backgroundColor === "#364fdc" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
     } else if (
       backgroundColor === "#364fdc" &&
-      latest <= 0.85 &&
+      latest < 0.85 &&
       latest > 0.35
     ) {
-      setBackgroundColor("#364fdc");
       setStickyColor("#f5f5f7");
     }
   });
