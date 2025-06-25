@@ -131,7 +131,7 @@ export default function Contact({
             </InfiniteSlider>
           </motion.div>
         </div>
-        <div
+        <motion.div
           className={styles.newWorld}
           style={{ color: titleColor }}
           ref={newWorldScope}
@@ -142,7 +142,7 @@ export default function Contact({
             <br />
             경험해보세요.
           </span>
-        </div>
+        </motion.div>
         <div className={styles.way}>
           <span>CONTACT</span>
           <div className={styles.info}>
