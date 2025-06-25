@@ -19,7 +19,6 @@ export default function Main({
   const [first, setFirst] = useState(true);
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
-  const [imageScope, imageAnimate] = useAnimate();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,11 +29,6 @@ export default function Main({
       setFirst(false);
       setOpacity(1 - (latest - 0.6) * 5);
       setBackgroundColor("#000000");
-      imageAnimate(
-        imageScope.current,
-        { opacity: 1 },
-        { duration: 0.3, ease: "easeOut" }
-      );
       return;
     }
     setOpacity(1 - (latest - 0.6) * 5);
@@ -61,9 +55,7 @@ export default function Main({
         className={styles.background}
         style={{ opacity: opacity }}
       >
-        <motion.img
-          initial={{ opacity: 0 }}
-          ref={imageScope}
+        <img
           src="https://res.cloudinary.com/hoyahoya/image/upload/v1749929215/leehyun/44-min_atsczg.png"
           alt="background"
         />

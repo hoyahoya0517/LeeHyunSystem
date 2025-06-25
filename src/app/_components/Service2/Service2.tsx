@@ -19,7 +19,7 @@ export default function Service2({
 }) {
   const [width, setWidth] = useState<number | undefined>();
   const [first, setFirst] = useState(true);
-  const [stickyColor, setStickyColor] = useState("#000000");
+  const [stickyColor, setStickyColor] = useState("#80808b");
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
   const [stackScope, stackAnimate] = useAnimate();

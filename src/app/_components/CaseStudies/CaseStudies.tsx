@@ -24,7 +24,7 @@ export default function CaseStudies({
   const [isPage, setIsPage] = useState(false);
   const [index, setIndex] = useState(1);
   const [first, setFirst] = useState(true);
-  const [stickyColor, setStickyColor] = useState("#000000");
+  const [stickyColor, setStickyColor] = useState("#80808b");
   const [opacity, setOpacity] = useState(0);
   const [scope, animate] = useAnimate();
   const [slideScope, slideAnimate] = useAnimate();
