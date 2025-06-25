@@ -24,6 +24,7 @@ export default function Contact({
   const [first, setFirst] = useState(true);
   const [scope, animate] = useAnimate();
   const [sliderScope, animateSlider] = useAnimate();
+  const [newWorldScope, animateNewWorld] = useAnimate();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -37,6 +38,11 @@ export default function Contact({
       setTitleColor("#f5f5f7");
       animateSlider(
         sliderScope.current,
+        { opacity: 1 },
+        { duration: 0.3, ease: "easeOut" }
+      );
+      animateNewWorld(
+        newWorldScope.current,
         { opacity: 1 },
         { duration: 0.3, ease: "easeOut" }
       );
@@ -57,12 +63,22 @@ export default function Contact({
         { opacity: 1 },
         { duration: 0.3, ease: "easeOut" }
       );
+      animateNewWorld(
+        newWorldScope.current,
+        { opacity: 1 },
+        { duration: 0.3, ease: "easeOut" }
+      );
     } else if (backgroundColor === "#364fdc" && latest < 0.35 && latest > 0) {
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
       setTitleColor("#f5f5f7");
       animateSlider(
         sliderScope.current,
+        { opacity: 0 },
+        { duration: 0.3, ease: "easeOut" }
+      );
+      animateNewWorld(
+        newWorldScope.current,
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
@@ -115,7 +131,12 @@ export default function Contact({
             </InfiniteSlider>
           </motion.div>
         </div>
-        <div className={styles.newWorld} style={{ color: titleColor }}>
+        <div
+          className={styles.newWorld}
+          style={{ color: titleColor }}
+          ref={newWorldScope}
+          initial={{ opacity: 0 }}
+        >
           <span>
             새로운 세상을
             <br />

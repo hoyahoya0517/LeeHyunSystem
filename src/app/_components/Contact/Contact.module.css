@@ -94,6 +94,7 @@
 }
 @media (max-width: 768px) {
   .newWorld {
+    position: fixed;
     top: 12px;
     left: 16px;
   }
