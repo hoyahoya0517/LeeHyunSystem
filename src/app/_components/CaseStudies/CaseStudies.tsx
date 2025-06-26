@@ -92,7 +92,6 @@ export default function CaseStudies({
     }
     setOpacity(1 - (latest - 0.6) * 5);
     if (backgroundColor === "#364fdc" && latest >= 0.35 && latest < 0.85) {
-      console.log("hi1");
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
       setStickyColor("#000000");
@@ -112,7 +111,8 @@ export default function CaseStudies({
       );
     } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
-    } else if (backgroundColor === "#364fdc" && latest < 0.9 && latest > 0.35) {
+    }
+    if (backgroundColor === "#364fdc" && latest < 0.85 && latest > 0.35) {
       setStickyColor("#000000");
     }
     if (latest >= 0.35 && latest < 0.65) {
