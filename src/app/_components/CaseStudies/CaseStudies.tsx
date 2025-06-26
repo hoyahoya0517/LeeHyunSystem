@@ -92,6 +92,7 @@ export default function CaseStudies({
     }
     setOpacity(1 - (latest - 0.6) * 5);
     if (backgroundColor === "#364fdc" && latest >= 0.35 && latest < 0.85) {
+      console.log("hi1");
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
       setStickyColor("#000000");
