@@ -123,10 +123,10 @@
     padding-left: 0;
   }
   .stack {
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
   }
   .cardP {
-    font-size: 72px;
+    font-size: 64px;
   }
 }
