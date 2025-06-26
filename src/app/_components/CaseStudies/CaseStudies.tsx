@@ -91,10 +91,12 @@ export default function CaseStudies({
       return;
     }
     setOpacity(1 - (latest - 0.6) * 5);
+    if (latest >= 0.35 && latest < 0.85) {
+      setStickyColor("#000000");
+    }
     if (backgroundColor === "#364fdc" && latest >= 0.35 && latest < 0.85) {
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
-      setStickyColor("#000000");
       slideAnimate(
         slideScope.current,
         { opacity: 1 },
@@ -111,9 +113,6 @@ export default function CaseStudies({
       );
     } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
-    }
-    if (latest < 0.85 && latest > 0.35) {
-      setStickyColor("#000000");
     }
     if (latest >= 0.35 && latest < 0.65) {
       setIsPage(true);
