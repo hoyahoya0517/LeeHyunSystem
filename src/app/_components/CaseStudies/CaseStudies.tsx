@@ -109,7 +109,6 @@ export default function CaseStudies({
         { opacity: 0 },
         { duration: 0.3, ease: "easeOut" }
       );
-      setIsPage(false);
     } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
     } else if (
@@ -119,14 +118,12 @@ export default function CaseStudies({
     ) {
       setStickyColor("#000000");
     }
-    if (backgroundColor === "#f5f5f7" && latest >= 0.65 && latest < 1) {
-      setIsPage(false);
-    } else if (
-      backgroundColor === "#f5f5f7" &&
-      latest < 0.65 &&
-      latest > 0.35
-    ) {
+    if (latest >= 0.35 && latest < 0.65) {
       setIsPage(true);
+    } else if (latest >= 0.65) {
+      setIsPage(false);
+    } else if (latest < 0.35) {
+      setIsPage(false);
     }
   });
   useEffect(() => {
