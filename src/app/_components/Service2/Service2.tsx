@@ -69,10 +69,12 @@ export default function Service2({
       return;
     }
     setOpacity(1 - (latest - 0.6) * 5);
+    if (latest >= 0.35 && latest < 0.85) {
+      setStickyColor("#f5f5f7");
+    }
     if (backgroundColor === "#364fdc" && latest >= 0.35 && latest < 0.85) {
       setBackgroundColor("#364fdc");
       setNavIsBlack(false);
-      setStickyColor("#f5f5f7");
       stackAnimate(
         stackScope.current,
         { opacity: 1 },
@@ -99,12 +101,6 @@ export default function Service2({
       );
     } else if (backgroundColor === "#364fdc" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
-    } else if (
-      backgroundColor === "#f5f5f7" &&
-      latest < 0.85 &&
-      latest > 0.35
-    ) {
-      setStickyColor("#f5f5f7");
     }
   });
   useEffect(() => {

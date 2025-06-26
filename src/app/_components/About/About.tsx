@@ -58,6 +58,9 @@ export default function About({
       return;
     }
     setOpacity(1 - (latest - 0.6) * 5);
+    if (latest >= 0.35 && latest < 0.85) {
+      setStickyColor("#000000");
+    }
     if (backgroundColor === "#000000" && latest >= 0.35 && latest < 0.85) {
       setBackgroundColor("#f5f5f7");
       setNavIsBlack(true);
@@ -76,12 +79,6 @@ export default function About({
       );
     } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
-    } else if (
-      backgroundColor === "#364fdc" &&
-      latest < 0.85 &&
-      latest > 0.35
-    ) {
-      setStickyColor("#000000");
     }
   });
   useEffect(() => {
