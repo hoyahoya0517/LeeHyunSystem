@@ -6,9 +6,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: `이현시스템`,
     description: `새로운 세상을 만드는 기술`,
-    images: "/images/apple-icon.png",
+    images:
+      "https://res.cloudinary.com/hoyahoya/image/upload/v1749929215/leehyun/44-min_atsczg.png",
   },
-  description: `귀여운 것만 팝니다`, // 브랜드 설명
+  description: `새로운 세상을 만드는 기술`, // 브랜드 설명
   // other: {
   //   "google-site-verification": "z51t_yEWb2JkWC3tHdtTJOowpAhKeiiEdLAfcK2kJrk",
   //   "naver-site-verification": "3e6288a5a45db0b37299ef3b4859b4f466b98192",
