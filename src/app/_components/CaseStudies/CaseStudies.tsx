@@ -112,11 +112,7 @@ export default function CaseStudies({
       );
     } else if (backgroundColor === "#f5f5f7" && latest >= 0.85 && latest < 1) {
       setStickyColor("#80808b");
-    } else if (
-      backgroundColor === "#364fdc" &&
-      latest < 0.85 &&
-      latest > 0.35
-    ) {
+    } else if (backgroundColor === "#364fdc" && latest < 0.9 && latest > 0.35) {
       setStickyColor("#000000");
     }
     if (latest >= 0.35 && latest < 0.65) {
