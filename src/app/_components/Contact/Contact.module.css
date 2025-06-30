@@ -98,8 +98,16 @@
     top: 12px;
     left: 16px;
   }
+  .newWorld span {
+    font-size: 54px;
+  }
   .way {
     bottom: 16px;
     left: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .newWorld span {
+    font-size: 32px;
   }
 }

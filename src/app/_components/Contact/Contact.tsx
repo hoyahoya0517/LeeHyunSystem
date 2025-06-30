@@ -146,8 +146,9 @@ export default function Contact({
         <div className={styles.way}>
           <span>CONTACT</span>
           <div className={styles.info}>
-            <span>서울시 송파구 가락동77-4 305</span>
-            <span>02-2222-2222</span>
+            <span>ljh6919@daum.net</span>
+            <span>010-6698-6828</span>
+            <span>경기도 하남시 미사강변중앙로7번안길 25 C606</span>
           </div>
         </div>
       </div>

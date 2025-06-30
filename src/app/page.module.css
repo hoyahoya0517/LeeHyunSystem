@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 .nav {
-  z-index: 8888;
+  z-index: 7777;
   position: fixed;
   top: 30px;
   right: 30px;
@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 .mobileNav {
-  z-index: 8888;
+  z-index: 7777;
   position: fixed;
   top: 16px;
   right: 16px;
@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 .navMenu {
-  z-index: 9999;
+  z-index: 8888;
   position: fixed;
   top: 0;
   left: 0;

@@ -61,3 +61,8 @@
     line-height: 1.2;
   }
 }
+@media (max-width: 480px) {
+  .logo svg {
+    height: 48px;
+  }
+}

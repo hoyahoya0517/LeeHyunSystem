@@ -68,6 +68,7 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .card2 {
   display: flex;
@@ -77,6 +78,7 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .card3 {
   display: flex;
@@ -86,6 +88,7 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .cardP {
   font-family: "DM Sans";
@@ -95,7 +98,87 @@
   font-weight: 400;
   padding: 12px;
 }
-
+.window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    0deg,
+    rgba(23, 23, 23, 0.46) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.windowMain {
+  width: 75%;
+  height: 80%;
+  background-color: var(--white-color);
+  position: relative;
+  padding: 48px 0 0 0;
+  cursor: default;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+.windowContent {
+  display: grid;
+  grid-template-columns: repeat(23, 1fr);
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+}
+.windowImage {
+  width: 100%;
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.imageContainer {
+  position: sticky;
+  top: 0;
+}
+.windowImage img {
+  width: 100%;
+  object-fit: cover;
+}
+.windowText {
+  grid-column: 13 / 24;
+  height: 100%;
+  word-break: keep-all;
+  font-family: "IBM Plex Sans KR";
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-right: calc(80vw / 23);
+}
+.windowText p {
+  font-size: 46px;
+  line-height: 1.2;
+  color: var(--black-color);
+}
+.windowText span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--black-color);
+  padding-bottom: 48px;
+}
 @media (max-width: 768px) {
   .service2 {
     padding: 0 16px;
@@ -128,5 +211,15 @@
   }
   .cardP {
     font-size: 64px;
+  }
+  .windowMain {
+    width: 90%;
+    height: 60%;
+  }
+  .windowContent {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px 0;
   }
 }
