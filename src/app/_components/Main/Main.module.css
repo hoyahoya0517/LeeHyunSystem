@@ -57,12 +57,12 @@
     left: 16px;
   }
   .comment span {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.2;
   }
 }
 @media (max-width: 480px) {
   .logo svg {
-    height: 42px;
+    height: 48px;
   }
 }

@@ -106,8 +106,8 @@
     left: 16px;
   }
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .newWorld span {
-    font-size: 32px;
+    font-size: 40px;
   }
-}
+} */
