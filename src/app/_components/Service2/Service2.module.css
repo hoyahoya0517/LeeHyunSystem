@@ -168,7 +168,7 @@
   padding-right: calc(80vw / 23);
 }
 .windowText p {
-  font-size: 46px;
+  font-size: 32px;
   line-height: 1.2;
   color: var(--black-color);
 }
@@ -177,7 +177,7 @@
   font-size: 16px;
   line-height: 1.35;
   color: var(--black-color);
-  padding-bottom: 48px;
+  padding-bottom: 16px;
 }
 @media (max-width: 768px) {
   .service2 {
@@ -214,7 +214,7 @@
   }
   .windowMain {
     width: 90%;
-    height: 60%;
+    height: 70%;
   }
   .windowContent {
     display: flex;
