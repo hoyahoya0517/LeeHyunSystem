@@ -222,4 +222,8 @@
     gap: 32px;
     padding: 0 16px 0;
   }
+  .windowImage {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
