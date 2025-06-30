@@ -161,18 +161,19 @@
   grid-column: 13 / 24;
   height: 100%;
   word-break: keep-all;
-  font-family: "IBM Plex Sans KR";
   display: flex;
   flex-direction: column;
   gap: 32px;
   padding-right: calc(80vw / 23);
 }
 .windowText p {
+  font-family: "DM Sans";
   font-size: 32px;
   line-height: 1.2;
   color: var(--black-color);
 }
 .windowText span {
+  font-family: "IBM Plex Sans KR";
   font-weight: 400;
   font-size: 16px;
   line-height: 1.35;
