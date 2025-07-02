@@ -14,9 +14,7 @@ export const metadata: Metadata = {
     google: "x2zE3oA_lfyPLrYhpFYcJYorjEtoHzIwsP2jJefInFA",
   },
   keywords: ["이현시스템", "leehyun", "leehyun system", "leehyun system"],
-  authors: [{ name: "이현시스템", url: "https://leehyunsystem.com" }],
-  creator: "이현시스템",
-  publisher: "이현시스템",
+  authors: [{ name: "이현시스템" }],
 };
 export default function RootLayout({
   children,

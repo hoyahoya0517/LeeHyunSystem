@@ -56,7 +56,7 @@ export default function Service2({
     } else if (first && latest < 0.35) {
       setFirst(false);
       setBackgroundColor("#364fdc");
-      setNavIsBlack(true);
+      setNavIsBlack(false);
       setStickyColor("#80808b");
       stackAnimate(
         stackScope.current,

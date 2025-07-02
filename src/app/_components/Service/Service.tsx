@@ -35,7 +35,6 @@ export default function Service({
       setOpacity(1 - (latest - 0.6) * 5);
       setBackgroundColor("#364fdc");
       setStickyColor("#f5f5f7");
-      setNavIsBlack(false);
       imageAnimate(
         imageScope.current,
         { opacity: 1 },
