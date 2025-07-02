@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /
-Disallow: /private/
 
+Host: https://leehyunsystem.com
 Sitemap: https://leehyunsystem.com/sitemap.xml
