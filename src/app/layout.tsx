@@ -3,16 +3,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: `이현시스템`, // 브랜드 이름
+  description: `새로운 세상을 만드는 기술`, // 브랜드 설명
   openGraph: {
     title: `이현시스템`,
     description: `새로운 세상을 만드는 기술`,
     images:
       "https://res.cloudinary.com/hoyahoya/image/upload/v1749929215/leehyun/44-min_atsczg.png",
   },
-  description: `새로운 세상을 만드는 기술`, // 브랜드 설명
   verification: {
     google: "x2zE3oA_lfyPLrYhpFYcJYorjEtoHzIwsP2jJefInFA",
   },
+  keywords: ["이현시스템", "leehyun", "leehyun system", "leehyun system"],
+  authors: [{ name: "이현시스템", url: "https://leehyunsystem.com" }],
+  creator: "이현시스템",
+  publisher: "이현시스템",
 };
 export default function RootLayout({
   children,
